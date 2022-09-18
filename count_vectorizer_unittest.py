@@ -43,5 +43,10 @@ class TestCountVectorizer(unittest.TestCase):
         corpus_2 = ['aplle bee table nine bee']
         self.two_corpus_compare(corpus_1, corpus_2)
 
+    def test_unfitted_get_feature_names(self):
+        vectorizer = CountVectorizer()
+        with self.assertRaises(ValueError):
+            vectorizer.get_feature_names()
+
 if __name__ == '__main__':
     unittest.main()
