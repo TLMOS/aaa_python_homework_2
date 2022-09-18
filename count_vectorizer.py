@@ -8,7 +8,7 @@ class CountVectorizer():
         self._vocabulary = None
 
     @staticmethod
-    def preprocess_document(doc: str):
+    def preprocess_document(doc: str) -> str:
         """Conver document to lower case, remove special characters, digits and double spaces."""
         doc = doc.lower()
         doc = re.sub(r'[^\w\s]', '', doc)
